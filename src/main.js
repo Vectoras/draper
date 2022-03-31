@@ -1,4 +1,11 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import store from './store';
 
-createApp(App).mount('#app')
+const app = createApp(App);
+
+// Plugins
+app.use(store);
+
+// Mounting the app
+app.mount('#app');
